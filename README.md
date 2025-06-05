@@ -66,4 +66,15 @@ The server will start on `http://localhost:3000`
 
 - Ensure your `@agentai/mcp-server` package is publicly available
 - Check Vercel deployment logs if issues occur
-- Verify your GitHub repository is public or Vercel has access 
+- Verify your GitHub repository is public or Vercel has access
+
+## Important: Disable Vercel Authentication
+
+To allow external access to your MCP server, you MUST disable authentication in Vercel:
+
+1. Go to your Vercel project dashboard
+2. Click "Settings" → "Security"  
+3. Disable "Password Protection" and "Vercel Authentication"
+4. Save changes and redeploy
+
+This ensures your app can call the MCP server without authentication barriers. 
