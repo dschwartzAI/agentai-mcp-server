@@ -11,7 +11,9 @@
   "engines": {
     "node": ">=18.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@agentai/mcp-server": "latest"
+  },
   "author": "",
   "license": "MIT"
 } 

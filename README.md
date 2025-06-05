@@ -68,13 +68,31 @@ The server will start on `http://localhost:3000`
 - Check Vercel deployment logs if issues occur
 - Verify your GitHub repository is public or Vercel has access
 
-## Important: Disable Vercel Authentication
+## Important: Authentication Setup
 
-To allow external access to your MCP server, you MUST disable authentication in Vercel:
+### 1. Configure Agent.AI API Token
+
+Your MCP server requires an Agent.AI API token to authenticate with Agent.AI services:
+
+1. Get your API token from [Agent.AI](https://agent.ai)
+2. Go to your Vercel project dashboard
+3. Click "Settings" → "Environment Variables"
+4. Add a new variable:
+   - **Name**: `API_TOKEN`
+   - **Value**: Your Agent.AI API token
+5. Redeploy the project
+
+### 2. Disable Vercel Authentication
+
+To allow external access to your MCP server, you MUST disable Vercel's built-in authentication:
 
 1. Go to your Vercel project dashboard
 2. Click "Settings" → "Security"  
 3. Disable "Password Protection" and "Vercel Authentication"
-4. Save changes and redeploy
+4. Save changes
 
-This ensures your app can call the MCP server without authentication barriers. 
+### 3. Test Authentication
+
+After setup, your endpoints will return:
+- ✅ `"authentication": "configured"` - Ready to use
+- ❌ `"authentication": "missing"` - API_TOKEN required 
