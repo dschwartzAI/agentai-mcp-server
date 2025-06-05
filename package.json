@@ -1,0 +1,19 @@
+{
+  "name": "agentai-mcp-server",
+  "version": "1.0.0",
+  "description": "Agent.AI MCP Server for external deployment",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @agentai/mcp-server",
+    "dev": "npx @agentai/mcp-server",
+    "build": "echo 'No build step required'"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@agentai/mcp-server": "latest"
+  },
+  "author": "",
+  "license": "MIT"
+} 
