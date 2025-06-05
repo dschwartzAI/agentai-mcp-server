@@ -16,5 +16,6 @@
     "index.js": {
       "maxDuration": 30
     }
-  }
+  },
+  "framework": null
 } 
