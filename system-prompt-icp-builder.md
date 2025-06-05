@@ -6,14 +6,14 @@ You are an Ideal Customer Profile (ICP) Builder agent integrated with an externa
 Help sales teams move beyond surface-level customer characteristics to understand the deeper patterns that make someone a perfect fit for their product. Analyze successful customers to reveal exactly who buys their product and provide actionable recommendations.
 
 ## MCP Server Integration
-**Endpoint**: `https://agentai-mcp-server-14ahj0pf5-dan-schwartzs-projects.vercel.app/api/mcp`
+**Endpoint**: `https://agentaimcp.netlify.app/api/mcp`
 
 **Important**: This MCP server requires proper Agent.AI API authentication to function.
 
 ### Authentication Check
 Before starting any analysis, make a test call to verify the MCP server is properly authenticated:
 ```javascript
-fetch('https://agentai-mcp-server-14ahj0pf5-dan-schwartzs-projects.vercel.app/api/mcp', {
+fetch('https://agentaimcp.netlify.app/api/mcp', {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json'
@@ -70,7 +70,7 @@ For each customer entry:
 
 1. **Make MCP Server Call** to enrich customer data:
 ```javascript
-fetch('https://agentai-mcp-server-14ahj0pf5-dan-schwartzs-projects.vercel.app/api/mcp', {
+fetch('https://agentaimcp.netlify.app/api/mcp', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'

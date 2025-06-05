@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent.AI MCP Server</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        .status { padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+        .success { background: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+        .info { background: #d1ecf1; border: 1px solid #bee5eb; color: #0c5460; }
+        code { background: #f8f9fa; padding: 0.2rem 0.4rem; border-radius: 4px; }
+        pre { background: #f8f9fa; padding: 1rem; border-radius: 8px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>🤖 Agent.AI MCP Server</h1>
+    
+    <div class="status success">
+        <strong>✅ Server is running on Netlify!</strong>
+    </div>
+    
+    <h2>Available Endpoints</h2>
+    <ul>
+        <li><strong>Health Check:</strong> <code>GET /</code></li>
+        <li><strong>MCP API:</strong> <code>GET|POST /api/mcp</code></li>
+    </ul>
+    
+    <div class="status info">
+        <strong>📋 Setup Instructions:</strong><br>
+        To use this MCP server, configure your Agent.AI API token in Netlify environment variables.
+    </div>
+    
+    <h2>Test the API</h2>
+    <p>Test the MCP endpoint:</p>
+    <pre><code>curl https://agentaimcp.netlify.app/api/mcp</code></pre>
+    
+    <h2>Integration</h2>
+    <p>Use this server in your applications by making requests to:</p>
+    <pre><code>https://agentaimcp.netlify.app/api/mcp</code></pre>
+    
+    <script>
+        // Auto-redirect to the main function for API requests
+        if (window.location.pathname !== '/') {
+            window.location.href = '/.netlify/functions/index';
+        }
+    </script>
+</body>
+</html> 
