@@ -10,6 +10,6 @@ module.exports = server;
 if (require.main === module) {
   const port = process.env.PORT || 3000;
   server.listen(port, () => {
-    console.log(`Agent.AI MCP Server running on port ${port}`);
+    console.log(`Agent.AI MCP Server running on port ${port} - Deployed ${new Date().toISOString()}`);
   });
 } 
